@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vowels Count</title>
+</head>
+<body>
+    <h3>Check how many vowels in your Name</h3>
+    <input type="text" id="user">
+    <button onclick="vowels()">Check</button>
+    <h4>No Of Vowels : <span id="result"></span></h4>
+</body>
+<script>
+    function vowels(name){
+        name = document.getElementById("user").value;
+        let look = name.match(/[aeiou]/gi);
+        let check = look.length;
+        return document.getElementById("result").innerHTML = check;
+    }
+</script>
+</html>
